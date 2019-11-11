@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Quote Generator</title>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+   <!--Custom CSS-->
+   <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container text-center main-content">
+      <div id="questionOne">
+        <h1 class="display-4 py-4 mt-4">In need of advice?</h1>
+        <button type="button" class="btn btn-info btn-lg questionOneButton">Sure!</button>
+      </div>
+      <!--Radio buttons for the two images-->
+      <section class="main-square">
+        <p class="lead text-header-style">1. Who would you like advice from?</p>
+        <article class="radio-button-div form-check-inline">
+            <div class="form-check radio-select ">
+              <label class="hover-label">
+                <img class="radio-img" src="images/buddha.jpg"/>
+                <input type="radio" class="form-check-input" checked="true" name="radiobutton" id="firstGenerator" value="firstGenerator">
+                <label class="form-check-label"><span>Buddha</span></label>
+              </label>
+              <img src=images/question.png title="Siddhārtha Gautama (सिद्धार्थ गौतम) was a monk (śramaṇa), mendicant, sage, philosopher, teacher and religious leader on whose teachings Buddhism was founded.">
+            </div>
+            <div class="form-check radio-select">
+              <label class="hover-label">
+                <img class="radio-img" id="bear-grylls" src="images/bear-grylls.jpg"/>
+                <input type="radio" class="form-check-input" name="radiobutton" id="secondGenerator" value"secondGenerator">
+                <label class="form-check-label"><span>Bear Grylls</span></label>
+              </label>
+              <img src=images/question.png title="A former British Special Forces serviceman who is wilderness survival expert with his own reality TV show, 'Man vs Wild'">
+            </div>
+        </article>
+
+        <!--Dropdown menu for choosing # of quotes.-->
+        <article class="my-4">
+          <div>
+            <p class="lead text-header-style">2. How many pieces of advice?</p>
+            <select id="list-dropdown"  aria-labelledby="dropdownMenuButton">
+              <option class="dropdown-item" value="1">1</option>
+              <option class="dropdown-item" value="2">2</option>
+              <option class="dropdown-item" value="3">3</option>
+              <option class="dropdown-item" value="4">4</option>
+              <option class="dropdown-item" value="5">5</option>
+            </select>
+          </div>
+        </article>
+        <!--Button to generate the quotes and open the modal window-->
+        <button type="button" class="btn btn-danger btn-lg" id="clickme" data-toggle="modal" data-target="#quotesGoHere">Show me my advice!</button>
+      </section>
+    </div>
+    <!--Modal window contents-->
+    <div id="quotesGoHere" class="text-center py-4 my-4 modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header" id="modal-header-color">
+            <h5 class="modal-title" id="quotesGenerateHereLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+           <div class="modal-body" >
+              <div id="quotesGenerateHere">
+                <!--The Quotes that are generated show up here.-->
+              </div>
+             <span id="insertIcon"><img src="images/fire.png" class="pt-4"/></span>
+           </div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" id="refresh" data-dismiss="modal">Refresh</button>
+           </div>
+         </div>
+       </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="javascript/scripts.js"></script>
+  </body>
+</html>
